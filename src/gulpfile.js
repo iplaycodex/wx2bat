@@ -22,6 +22,7 @@ const list = [{
     css: ".css",
     js: '.js',
     ins:'s-',
+    getuserinfo:'bindgetuserinfo',
     api: "swan."
   }
 }, {
@@ -31,6 +32,7 @@ const list = [{
     css: ".acss",
     js: '.js',
     ins:'a:',
+    getuserinfo:'bindgetuserinfo',
     api: 'my.'
   }
 }, {
@@ -40,6 +42,7 @@ const list = [{
     css: ".ttss",
     js: '.js',
     ins:'tt:',
+    getuserinfo:'bindtap',
     api: 'tt.'
   }
 }];
@@ -61,6 +64,7 @@ gulp.task('wxml', function () {
       .src(wxmlFiles)
       .pipe($.debug({ title: '[wxml 文件]' }))
       .pipe($.replace('wx:', obj.ins))
+      .pipe($.replace('bindgetuserinfo', obj.getuserinfo))
       .pipe(
         $.rename({
           extname: obj.html

@@ -1,6 +1,6 @@
 {
   "name": "wx2bat",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "微信小程序转百度,支付宝,头条小程序工具",
   "main": "src/index.js",
   "scripts": {
